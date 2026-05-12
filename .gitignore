@@ -1,0 +1,84 @@
+# ════════════════════════════════════════════════════════════════════════
+# DexterAI Extended — .gitignore
+# ════════════════════════════════════════════════════════════════════════
+
+# ─── Secretos: NUNCA PUSHEAR ────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+api_key.txt
+config/alpaca.env
+openbb_worker/.env
+**/*.key
+**/*.pem
+**/*credentials*.json
+
+# ─── Data local (puede ser muy grande, regenerable) ─────────────────────
+data/
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# ─── ML artifacts (regenerables con train.py) ───────────────────────────
+ml/models/*.joblib
+ml/metrics/*.json
+ml/data/*.parquet
+ml/reports/*.html
+ml/__pycache__/
+
+# ─── Backtest outputs ───────────────────────────────────────────────────
+backtest/reports/*.html
+backtest/__pycache__/
+backtest/strategies/__pycache__/
+
+# ─── Logs ───────────────────────────────────────────────────────────────
+*.log
+*.log.*
+server.log
+data_engine/*.log
+openbb_worker/*.log
+trading_agent.log
+
+# ─── Python venvs ───────────────────────────────────────────────────────
+.venv/
+venv/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+data_engine/__pycache__/
+
+# ─── Node ───────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.pnpm-debug.log*
+
+# ─── Historical / portfolios outputs (regenerables) ─────────────────────
+historical/*.log
+portfolios/
+insights/
+
+# ─── IDE / OS ───────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Vercel / Next ──────────────────────────────────────────────────────
+.vercel
+.next
+
+# ─── Temp ───────────────────────────────────────────────────────────────
+tmp/
+*.tmp
+*.bak

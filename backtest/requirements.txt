@@ -1,0 +1,4 @@
+vectorbt>=1.0
+pandas-ta>=0.4
+plotly>=5.20
+kaleido>=0.2.1

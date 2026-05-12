@@ -1,0 +1,32 @@
+{
+  "name": "dexterai-extended",
+  "version": "2.0.0",
+  "description": "DexterAI Extended — Monitor financiero con Markowitz, CAPM, alertas automáticas y contexto nocturno",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "live": "powershell -ExecutionPolicy Bypass -File ./start_live.ps1",
+    "openbb": "python openbb_worker/start.py",
+    "test": "node tests/runner.js",
+    "test:lib": "node -e \"require('./tests/test_marketData.js'); require('./tests/test_indicators.js'); require('./tests/runner').run()\"",
+    "init-db": "node -e \"require('./lib/db').initDb()\"",
+    "cron-alerts": "node cron/alert_checker.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "node-cron": "^3.0.3",
+    "sqlite3": "^5.1.6",
+    "ws": "^8.16.0",
+    "yahoo-finance2": "^3.14.0"
+  },
+  "keywords": [
+    "trading",
+    "finance",
+    "markowitz",
+    "capm",
+    "alerts",
+    "technical-analysis"
+  ],
+  "author": "DexterAI Team",
+  "license": "MIT"
+}

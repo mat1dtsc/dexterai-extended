@@ -1,0 +1,34 @@
+[
+  {
+    "date": "2026-05-10",
+    "best_portfolio": "tech",
+    "best_score": 0.0016,
+    "portfolios": {
+      "tech": {
+        "sharpe": 0.447,
+        "alpha": 0.0035,
+        "beta": 1.531
+      },
+      "finance": {
+        "sharpe": 0.11,
+        "alpha": 0.0002,
+        "beta": 1.354
+      },
+      "energy": {
+        "sharpe": 0.168,
+        "alpha": 0.0021,
+        "beta": -0.772
+      },
+      "healthcare": {
+        "sharpe": -0.041,
+        "alpha": -0.0006,
+        "beta": 0.574
+      },
+      "core": {
+        "sharpe": 0.327,
+        "alpha": 0.001,
+        "beta": 1.108
+      }
+    }
+  }
+]
